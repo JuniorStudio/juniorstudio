@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuniorStudio - Portfolio</title>
+    <title>JuniorStudio | Profesjonalna Grafika & Miniaturki</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,53 +14,58 @@
     <header>
         <div class="logo">Junior<span>Studio</span></div>
         <nav>
-            <a href="#start">Start</a>
+            <a href="#home">Start</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#cennik">Cennik</a>
-            <a href="#o-mnie">O mnie</a>
+            <a href="#about">O mnie</a>
             <a href="#wspolpraca">Współpraca</a>
             <a href="#kontakt">Kontakt</a>
         </nav>
-        <a href="#kontakt" class="cta-btn-nav">Napisz do mnie</a>
+        <a href="https://www.behance.net/juniorstudio_pl" target="_blank" class="cta-btn-nav"><i class="fa-brands fa-behance"></i> Behance</a>
     </header>
 
-    <!-- SEKCJA START / HERO -->
-    <section id="start" class="hero">
+    <!-- SEKCJA HERO (START) -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Tworzę profesjonalną grafikę dla <span class="gradient-text">Twojego projektu</span></h1>
-            <p>Jestem młodym, ale ambitnym grafikiem. Pomagam wyróżnić się w tłumie za pomocą unikalnych projektów dopasowanych do Twoich potrzeb.</p>
+            <h1>Tworzę grafikę, która <span class="gradient-text">przyciąga widzów</span></h1>
+            <p>Profesjonalne miniaturki YouTube, banery i oprawy graficzne dla twórców contentu. Wyróżnij swój kanał w tłumie.</p>
             <div class="hero-btns">
-                <a href="#portfolio" class="btn primary">Zobacz portfolio <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#kontakt" class="btn secondary">Kontakt</a>
+                <a href="#portfolio" class="btn primary">Zobacz Portfolio</a>
+                <a href="#cennik" class="btn secondary">Sprawdź Cennik</a>
             </div>
         </div>
     </section>
 
     <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
-        <h2>Moje <span class="gradient-text">Portfolio</span></h2>
-        <p class="subtitle">Kliknij w projekt, aby zobaczyć szczegóły</p>
+        <h2>Wybrane <span class="gradient-text">Realizacje</span></h2>
+        <p class="subtitle">Kliknij w projekt, aby zobaczyć grafikę w pełnej, ultra-wysokiej jakości.</p>
         
         <div class="portfolio-grid">
-            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop', 'Grafika 3D / Abstrakcja', 'Zaawansowany projekt z naciskiem na identyfikację wizualną marki.')">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Projekt 1">
+            <!-- PROJEKT 1: CS2 -->
+            <div class="portfolio-item" onclick="openModal('cs2.png', 'Miniaturka CS2 - 500zł na skiny', 'Przyciągająca wzrok miniaturka do materiału z Counter-Strike 2. Zaprojektowana tak, aby maksymalnie podnieść klikalność (CTR) przy filmach z otwierania skrzynek i wygrywania nagród.')">
+                <img src="cs2.png" alt="Miniaturka CS2">
                 <div class="overlay">
-                    <h3>Grafika 3D / Abstrakcja</h3>
-                    <p>Identyfikacja wizualna</p>
+                    <h3>Miniaturka CS2</h3>
+                    <p>Kliknij po podgląd HD</p>
                 </div>
             </div>
-            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop', 'Projekt Interfejsu', 'Nowoczesny projekt UI/UX dopasowany pod urządzenia mobilne i desktop.')">
-                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop" alt="Projekt 2">
+
+            <!-- PROJEKT 2: MANHUNT --> 
+            <div class="portfolio-item" onclick="openModal('manhunt.png', 'Arab_mc Manhunt 1vs4', 'Dynamiczna miniaturka do filmu Minecraft Manhunt 1vs4 stworzona dla twórcy Arab_mc. Przedstawia ucieczkę pod ziemią i skoordynowany pościg łowców na powierzchni.')">
+                <img src="manhunt.png" alt="Arab_mc Manhunt 1vs4">
                 <div class="overlay">
-                    <h3>Projekt Interfejsu</h3>
-                    <p>UI/UX Design</p>
+                    <h3>Arab_mc Manhunt 1vs4</h3>
+                    <p>Kliknij po podgląd HD</p>
                 </div>
             </div>
-            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop', 'Branding i Grafika', 'Profesjonalna oprawa graficzna pod media społecznościowe.')">
-                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop" alt="Projekt 3">
+
+            <!-- PROJEKT 3: BANER -->
+            <div class="portfolio-item" onclick="openModal('banner.png', 'Baner JuniorStudio', 'Nowoczesny i elegancki baner reklamowy JuniorStudio budujący profesjonalny wizerunek marki.')">
+                <img src="banner.png" alt="Baner JuniorStudio">
                 <div class="overlay">
-                    <h3>Branding i Grafika</h3>
-                    <p>Social Media</p>
+                    <h3>Baner / Oprawa</h3>
+                    <p>Kliknij po podgląd HD</p>
                 </div>
             </div>
         </div>
@@ -69,99 +74,93 @@
     <!-- SEKCJA CENNIK -->
     <section id="cennik" class="pricing-section">
         <div class="section-title">
-            <h2>Przejrzysty <span class="gradient-text">Cennik</span></h2>
-            <p>Wybierz interesującą Cię usługę</p>
+            <h2>Cennik <span class="gradient-text">Usług</span></h2>
+            <p>Proste, uczciwe ceny — bez ukrytych kosztów</p>
         </div>
-
+        
         <div class="pricing-grid-wrapper">
             <div class="pricing-list">
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Miniaturki YouTube</h4>
+                        <span>Wysoki CTR i przyciągający styl</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 25 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Profilowe / Avatar</h4>
+                        <span>Dopasowany do Twojego brandingu</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 20 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Baner YouTube / Discord</h4>
+                        <span>Profesjonalna oprawa górna</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 25 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                
                 <div class="price-item highlight-item">
                     <div class="price-info">
-                        <h4>Miniaturka YouTube</h4>
-                        <span>Przyciągająca wzrok, wysoka klikalność (CTR)</span>
+                        <h4>Pakiet: Profilowe + Baner</h4>
+                        <span>Kompletny zestaw promocyjny</span>
                     </div>
                     <div class="price-action">
-                        <span class="price-val">od 30 zł</span>
-                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
-                    </div>
-                </div>
-                <div class="price-item">
-                    <div class="price-info">
-                        <h4>Baner / Grafika profilowa</h4>
-                        <span>Dopasowana pod Twoje social media</span>
-                    </div>
-                    <div class="price-action">
-                        <span class="price-val">od 45 zł</span>
-                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
-                    </div>
-                </div>
-                <div class="price-item">
-                    <div class="price-info">
-                        <h4>Projekt Logo / Branding</h4>
-                        <span>Unikalny znak dla Twojej marki</span>
-                    </div>
-                    <div class="price-action">
-                        <span class="price-val">od 100 zł</span>
-                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
-                    </div>
-                </div>
-                <div class="price-item">
-                    <div class="price-info">
-                        <h4>Okładka płyty / Albumu / Release</h4>
-                        <span>Unikalny design pod Twoją muzykę lub projekt</span>
-                    </div>
-                    <div class="price-action">
-                        <span class="price-val">od 70 zł</span>
-                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
-                    </div>
-                </div>
-                <div class="price-item">
-                    <div class="price-info">
-                        <h4>Grafika pod serwer Discord / Minecraft</h4>
-                        <span>Ikony, rangi, banery i grafiki reklamowe</span>
-                    </div>
-                    <div class="price-action">
-                        <span class="price-val">od 50 zł</span>
+                        <span class="price-val">45 zł</span>
                         <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
                     </div>
                 </div>
             </div>
-
+            
             <div class="pricing-card-side">
-                <h3>Dlaczego warto?</h3>
+                <h3>Dlaczego my?</h3>
                 <ul class="why-us-list">
-                    <li><i class="fa-solid fa-circle"></i> Szybki czas realizacji</li>
-                    <li><i class="fa-solid fa-circle"></i> Poprawki w cenie</li>
-                    <li><i class="fa-solid fa-circle"></i> Stały kontakt i pomoc</li>
+                    <li><i class="fa-solid fa-check"></i> Szybka realizacja</li>
+                    <li><i class="fa-solid fa-check"></i> Wysoka jakość</li>
+                    <li><i class="fa-solid fa-check"></i> Indywidualne podejście</li>
+                    <li><i class="fa-solid fa-check"></i> Nielimitowane poprawki</li>
                 </ul>
                 <div class="payment-methods">
-                    <p>Akceptowane płatności:</p>
-                    <p class="methods-text">Blik, Przelew, PayPal, Payhip</p>
+                    <p>Formy płatności:</p>
+                    <p class="methods-text">BLIK • Przelew tradycyjny</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SEKCJA O MNIE -->
-    <section id="o-mnie" class="about-section">
-        <h2>Kilka słów <span class="gradient-text">O Mnie</span></h2>
+    <section id="about" class="about-section">
+        <h2>O <span class="gradient-text">Mnie</span></h2>
         <p class="about-desc">
-            Cześć! Zajmuję się grafiką użytkową oraz projektowaniem cyfrowym. Moim celem jest dostarczanie estetycznych i skutecznych wizualnie projektów, które pomagają twórcom oraz firmom w budowaniu ich wizerunku w sieci. Dbam o każdy detal i terminowość.
+            Cześć! Jestem twórcą JuniorStudio. Zajmuję się profesjonalnym projektowaniem grafik dla twórców internetowych – ze szczególnym naciskiem na przyciągające wzrok miniaturki YouTube, które drastycznie podnoszą CTR i pomagają kanałom rosnąć. Dbam o każdy detal, unikalny styl i szybki czas realizacji.
         </p>
     </section>
 
     <!-- SEKCJA WSPÓŁPRACA -->
     <section id="wspolpraca" class="clients-section">
-        <h2>Współpraca <span class="gradient-text">z twórcami</span></h2>
+        <h2>Wybrana <span class="gradient-text">Współpraca</span></h2>
         <div class="client-card">
-            <div class="client-avatar">
-                <i class="fa-solid fa-user"></i>
+            <div class="client-avatar" onclick="window.open('https://www.youtube.com/@ArabbbYT', '_blank')" title="Kliknij, aby przejść do kanału YouTube!">
+                <i class="fa-solid fa-play"></i>
             </div>
             <div class="client-info">
-                <h3>Współpraca z arab_mc</h3>
-                <div class="client-stats">Zaufane projekty dla twórców i projektów internetowych</div>
-                <p>Współpracuję z arab_mc oraz innymi twórcami, dostarczając im profesjonalne grafiki na najwyższym poziomie, które budują wizerunek i przyciągają odbiorców.</p>
-                <a href="#kontakt" class="btn primary yt-btn"><i class="fa-solid fa-handshake"></i> Podejmij współpracę</a>
+                <h3>Arab_mc</h3>
+                <p class="client-stats"><span>~3,74 tys. subskrybentów</span> • <span>87,3 tys.+ wyświetleń</span></p>
+                <p>Twórca contentu gamingowego, dla którego realizowałem projekty graficzne. Kliknij w awatar lub przycisk poniżej, aby odwiedzić jego kanał na YouTube!</p>
+                <a href="https://www.youtube.com/@ArabbbYT" target="_blank" class="btn secondary yt-btn"><i class="fa-brands fa-youtube"></i> Odwiedź kanał Arab_mc</a>
             </div>
         </div>
     </section>
@@ -172,9 +171,9 @@
         <p class="subtitle">Skontaktuj się z JuniorStudio przez wybrane kanały</p>
 
         <div class="contact-cards-container">
-            <a href="https://discord.gg/aqat2wQGV" target="_blank" class="contact-card-item">
+            <a href="https://discord.com" target="_blank" class="contact-card-item">
                 <div class="contact-text">
-                    <span class="contact-label">Discord (Serwer)</span>
+                    <span class="contact-label">Discord</span>
                     <span class="contact-val">kontakt.juniorstudio</span>
                 </div>
                 <i class="fa-brands fa-discord"></i>
@@ -197,39 +196,28 @@
         <p class="contact-footer-note">Dziękuję za uwagę — do zobaczenia na Discordzie!</p>
     </section>
 
-    <!-- STOPKA -->
-    <footer>
-        <p>&copy; 2026 JuniorStudio. Wszelkie prawa zastrzeżone.</p>
-        <div class="footer-socials">
-            <a href="https://discord.gg/aqat2wQGV" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://www.behance.net/juniorstudio_pl" target="_blank"><i class="fa-brands fa-behance"></i></a>
-        </div>
-    </footer>
-
-    <!-- OKNO MODAL DO ZDJĘĆ -->
+    <!-- MODAL DO PODGLĄDU GRAFIKI W ULTRA JAKOŚCI -->
     <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
         <div class="modal-content-container" onclick="event.stopPropagation()">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImg" src="" alt="Podgląd">
+            <img id="modalImg" src="" alt="Podgląd HD">
             <div class="modal-text">
-                <span class="badge-hd"><i class="fa-solid fa-check"></i> Projekt JuniorStudio</span>
-                <h3 id="modalTitle">Tytuł</h3>
-                <p id="modalDesc">Opis</p>
-                <a href="#kontakt" class="btn primary btn-sm" onclick="closeModal()">Zamów podobny projekt</a>
+                <h3 id="modalTitle">Tytuł projektu</h3>
+                <p id="modalDesc">Opis projektu...</p>
+                <span class="badge-hd"><i class="fa-solid fa-gem"></i> Tryb Ultra HD (Piksel-perfect)</span>
             </div>
         </div>
     </div>
 
-    <script>
-        function openModal(src, title, desc) {
-            document.getElementById('modalImg').src = src;
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalDesc').innerText = desc;
-            document.getElementById('imageModal').classList.add('active');
-        }
-        function closeModal() {
-            document.getElementById('imageModal').classList.remove('active');
-        }
-    </script>
+    <!-- STOPKA -->
+    <footer>
+        <p>&copy; 2026 JuniorStudio. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-socials">
+            <a href="https://www.behance.net/juniorstudio_pl" target="_blank"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://www.youtube.com/@ArabbbYT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
