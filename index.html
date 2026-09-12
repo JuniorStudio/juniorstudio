@@ -1,639 +1,235 @@
-/* GŁÓWNE STYLE STRONY */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #070709;
-    color: #fff;
-    overflow-x: hidden;
-}
-
-/* NAGŁÓWEK / MENU */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(7, 7, 9, 0.85);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.5px;
-}
-
-.logo span {
-    color: #c084fc;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #a1a1aa;
-    font-size: 0.95rem;
-    font-weight: 400;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-.cta-btn-nav {
-    background: linear-gradient(135deg, #a855f7, #9333ea);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-}
-
-.cta-btn-nav:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
-}
-
-/* SEKCJA HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
-    background: radial-gradient(circle at 80% 30%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #c084fc, #9333ea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    color: #a1a1aa;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.hero-btns {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn.primary {
-    background: #fff;
-    color: #070709;
-}
-
-.btn.primary:hover {
-    background: #e4e4e7;
-    transform: translateY(-2px);
-}
-
-.btn.secondary {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.btn.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-/* PORTFOLIO */
-.portfolio {
-    padding: 100px 8%;
-}
-
-.portfolio h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #a1a1aa;
-    margin-bottom: 40px;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.portfolio-item {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #141419;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    border-color: rgba(192, 132, 252, 0.4);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    transition: 0.3s;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.03);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    background: linear-gradient(to top, rgba(7,7,9,0.95), transparent);
-}
-
-.overlay h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.overlay p {
-    color: #c084fc;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* SEKCJA CENNIK */
-.pricing-section {
-    padding: 100px 8%;
-    background: #0b0b0e;
-}
-
-.section-title {
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
-.section-title p {
-    color: #a1a1aa;
-    margin-top: 10px;
-}
-
-.pricing-grid-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: start;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.pricing-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.price-item {
-    background: #141419;
-    padding: 20px 25px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.3s;
-}
-
-.price-item:hover {
-    border-color: rgba(192, 132, 252, 0.3);
-}
-
-.highlight-item {
-    border-color: rgba(192, 132, 252, 0.4);
-    background: #16141f;
-}
-
-.price-info h4 {
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.price-info span {
-    color: #a1a1aa;
-    font-size: 0.9rem;
-}
-
-.price-action {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.price-val {
-    color: #c084fc;
-    font-weight: 600;
-    font-size: 1.1rem;
-    white-space: nowrap;
-}
-
-.btn-sm {
-    padding: 8px 16px !important;
-    font-size: 0.85rem !important;
-}
-
-.pricing-card-side {
-    background: #141419;
-    border: 1px solid rgba(192, 132, 252, 0.2);
-    border-radius: 16px;
-    padding: 30px;
-}
-
-.pricing-card-side h3 {
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-}
-
-.why-us-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    color: #d4d4d8;
-    font-size: 0.95rem;
-}
-
-.why-us-list i {
-    font-size: 10px;
-    color: #c084fc;
-    margin-right: 10px;
-}
-
-.payment-methods {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.payment-methods p {
-    font-size: 0.85rem;
-    color: #a1a1aa;
-    margin-bottom: 5px;
-}
-
-.methods-text {
-    font-size: 0.9rem !important;
-    color: #fff !important;
-    font-weight: 500;
-}
-
-/* SEKCJA O MNIE */
-.about-section {
-    padding: 85px 8%;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
-.about-desc {
-    color: #a1a1aa;
-    max-width: 700px;
-    margin: 20px auto 0 auto;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-/* SEKCJA WSPÓŁPRACA */
-.clients-section {
-    padding: 80px 8%;
-    background: #0b0b0e;
-}
-
-.clients-section h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-
-.client-card {
-    background: #141419;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 900px;
-    margin-top: 30px;
-}
-
-.client-avatar {
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg, #c084fc, #9333ea);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #fff;
-    flex-shrink: 0;
-    box-shadow: 0 0 25px rgba(192, 132, 252, 0.4);
-    transition: 0.3s;
-}
-
-.client-avatar:hover {
-    transform: scale(1.05);
-}
-
-.client-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-}
-
-.client-stats {
-    font-size: 0.9rem;
-    color: #a1a1aa;
-    margin-bottom: 15px;
-}
-
-.client-stats span {
-    color: #fff;
-    font-weight: 600;
-}
-
-.client-info p {
-    color: #d4d4d8;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.yt-btn {
-    background: #ff0000 !important;
-    border: none !important;
-}
-
-.yt-btn:hover {
-    background: #cc0000 !important;
-}
-
-/* SEKCJA KONTAKT */
-.contact-section {
-    padding: 100px 8%;
-    text-align: center;
-    background: #070709;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
-.contact-cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 30px auto 0 auto;
-}
-
-.contact-card-item {
-    background: #141419;
-    border: 1px solid rgba(192, 132, 252, 0.2);
-    padding: 22px 30px;
-    border-radius: 14px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.contact-card-item:hover {
-    border-color: #c084fc;
-    transform: translateY(-2px);
-}
-
-.contact-text {
-    text-align: left;
-}
-
-.contact-label {
-    color: #a1a1aa;
-    font-size: 0.85rem;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.contact-val {
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.contact-card-item i {
-    color: #c084fc;
-    font-size: 1.5rem;
-}
-
-.contact-footer-note {
-    color: #71717a;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-
-/* STOPKA */
-footer {
-    padding: 40px 8%;
-    background: #040405;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #71717a;
-    font-size: 0.9rem;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-socials a {
-    color: #a1a1aa;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-socials a:hover {
-    color: #c084fc;
-}
-
-/* MODAL / PODGLĄD HD */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(8px);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal-content-container {
-    background: #141419;
-    border: 1px solid rgba(192, 132, 252, 0.3);
-    border-radius: 20px;
-    max-width: 800px;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-    animation: modalScale 0.3s ease;
-}
-
-@keyframes modalScale {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-#modalImg {
-    width: 100%;
-    max-height: 450px;
-    object-fit: cover;
-    display: block;
-}
-
-.modal-text {
-    padding: 30px;
-}
-
-.modal-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.modal-text p {
-    color: #a1a1aa;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.badge-hd {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(192, 132, 252, 0.1);
-    color: #c084fc;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 300;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.close:hover {
-    color: #c084fc;
-}
-
-/* RESPONSYWNOŚĆ DLA URZĄDZEŃ MOBILNYCH */
-@media (max-width: 900px) {
-    .pricing-grid-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .client-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    nav {
-        display: none;
-    }
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuniorStudio - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAGŁÓWEK / MENU -->
+    <header>
+        <div class="logo">Junior<span>Studio</span></div>
+        <nav>
+            <a href="#start">Start</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#wspolpraca">Współpraca</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+        <a href="#kontakt" class="cta-btn-nav">Napisz do mnie</a>
+    </header>
+
+    <!-- SEKCJA START / HERO -->
+    <section id="start" class="hero">
+        <div class="hero-content">
+            <h1>Tworzę profesjonalną grafikę dla <span class="gradient-text">Twojego projektu</span></h1>
+            <p>Jestem młodym, ale ambitnym grafikiem. Pomagam wyróżnić się w tłumie za pomocą unikalnych projektów dopasowanych do Twoich potrzeb.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn primary">Zobacz portfolio <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#kontakt" class="btn secondary">Kontakt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <h2>Moje <span class="gradient-text">Portfolio</span></h2>
+        <p class="subtitle">Kliknij w projekt, aby zobaczyć szczegóły</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop', 'Grafika 3D / Abstrakcja', 'Zaawansowany projekt z naciskiem na identyfikację wizualną marki.')">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Projekt 1">
+                <div class="overlay">
+                    <h3>Grafika 3D / Abstrakcja</h3>
+                    <p>Identyfikacja wizualna</p>
+                </div>
+            </div>
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop', 'Projekt Interfejsu', 'Nowoczesny projekt UI/UX dopasowany pod urządzenia mobilne i desktop.')">
+                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop" alt="Projekt 2">
+                <div class="overlay">
+                    <h3>Projekt Interfejsu</h3>
+                    <p>UI/UX Design</p>
+                </div>
+            </div>
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop', 'Branding i Grafika', 'Profesjonalna oprawa graficzna pod media społecznościowe.')">
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop" alt="Projekt 3">
+                <div class="overlay">
+                    <h3>Branding i Grafika</h3>
+                    <p>Social Media</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA CENNIK -->
+    <section id="cennik" class="pricing-section">
+        <div class="section-title">
+            <h2>Przejrzysty <span class="gradient-text">Cennik</span></h2>
+            <p>Wybierz interesującą Cię usługę</p>
+        </div>
+
+        <div class="pricing-grid-wrapper">
+            <div class="pricing-list">
+                <div class="price-item highlight-item">
+                    <div class="price-info">
+                        <h4>Miniaturka YouTube</h4>
+                        <span>Przyciągająca wzrok, wysoka klikalność (CTR)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 30 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Baner / Grafika profilowa</h4>
+                        <span>Dopasowana pod Twoje social media</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 45 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Projekt Logo / Branding</h4>
+                        <span>Unikalny znak dla Twojej marki</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 100 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Okładka płyty / Albumu / Release</h4>
+                        <span>Unikalny design pod Twoją muzykę lub projekt</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 70 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-info">
+                        <h4>Grafika pod serwer Discord / Minecraft</h4>
+                        <span>Ikony, rangi, banery i grafiki reklamowe</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price-val">od 50 zł</span>
+                        <a href="#kontakt" class="btn primary btn-sm">Zamów</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-card-side">
+                <h3>Dlaczego warto?</h3>
+                <ul class="why-us-list">
+                    <li><i class="fa-solid fa-circle"></i> Szybki czas realizacji</li>
+                    <li><i class="fa-solid fa-circle"></i> Poprawki w cenie</li>
+                    <li><i class="fa-solid fa-circle"></i> Stały kontakt i pomoc</li>
+                </ul>
+                <div class="payment-methods">
+                    <p>Akceptowane płatności:</p>
+                    <p class="methods-text">Blik, Przelew, PayPal, Payhip</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA O MNIE -->
+    <section id="o-mnie" class="about-section">
+        <h2>Kilka słów <span class="gradient-text">O Mnie</span></h2>
+        <p class="about-desc">
+            Cześć! Zajmuję się grafiką użytkową oraz projektowaniem cyfrowym. Moim celem jest dostarczanie estetycznych i skutecznych wizualnie projektów, które pomagają twórcom oraz firmom w budowaniu ich wizerunku w sieci. Dbam o każdy detal i terminowość.
+        </p>
+    </section>
+
+    <!-- SEKCJA WSPÓŁPRACA -->
+    <section id="wspolpraca" class="clients-section">
+        <h2>Współpraca <span class="gradient-text">z twórcami</span></h2>
+        <div class="client-card">
+            <div class="client-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="client-info">
+                <h3>Współpraca z arab_mc</h3>
+                <div class="client-stats">Zaufane projekty dla twórców i projektów internetowych</div>
+                <p>Współpracuję z arab_mc oraz innymi twórcami, dostarczając im profesjonalne grafiki na najwyższym poziomie, które budują wizerunek i przyciągają odbiorców.</p>
+                <a href="#kontakt" class="btn primary yt-btn"><i class="fa-solid fa-handshake"></i> Podejmij współpracę</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA KONTAKT -->
+    <section id="kontakt" class="contact-section">
+        <h2>Szukasz Grafika? <span class="gradient-text">Napisz do mnie!</span></h2>
+        <p class="subtitle">Skontaktuj się z JuniorStudio przez wybrane kanały</p>
+
+        <div class="contact-cards-container">
+            <a href="https://discord.gg/aqat2wQGV" target="_blank" class="contact-card-item">
+                <div class="contact-text">
+                    <span class="contact-label">Discord (Serwer)</span>
+                    <span class="contact-val">kontakt.juniorstudio</span>
+                </div>
+                <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="https://www.behance.net/juniorstudio_pl" target="_blank" class="contact-card-item">
+                <div class="contact-text">
+                    <span class="contact-label">Behance</span>
+                    <span class="contact-val">behance.net/juniorstudio_pl</span>
+                </div>
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://payhip.com/JuniorStudioo" target="_blank" class="contact-card-item">
+                <div class="contact-text">
+                    <span class="contact-label">Sklep / Payhip</span>
+                    <span class="contact-val">payhip.com/JuniorStudioo</span>
+                </div>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+        </div>
+        <p class="contact-footer-note">Dziękuję za uwagę — do zobaczenia na Discordzie!</p>
+    </section>
+
+    <!-- STOPKA -->
+    <footer>
+        <p>&copy; 2026 JuniorStudio. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-socials">
+            <a href="https://discord.gg/aqat2wQGV" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.behance.net/juniorstudio_pl" target="_blank"><i class="fa-brands fa-behance"></i></a>
+        </div>
+    </footer>
+
+    <!-- OKNO MODAL DO ZDJĘĆ -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content-container" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Podgląd">
+            <div class="modal-text">
+                <span class="badge-hd"><i class="fa-solid fa-check"></i> Projekt JuniorStudio</span>
+                <h3 id="modalTitle">Tytuł</h3>
+                <p id="modalDesc">Opis</p>
+                <a href="#kontakt" class="btn primary btn-sm" onclick="closeModal()">Zamów podobny projekt</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(src, title, desc) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('imageModal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
