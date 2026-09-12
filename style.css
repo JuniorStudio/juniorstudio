@@ -221,8 +221,7 @@ nav a:hover {
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
@@ -323,7 +322,7 @@ nav a:hover {
 }
 
 .why-us-list i {
-    font-size: 8px;
+    font-size: 10px;
     color: #c084fc;
     margin-right: 10px;
 }
@@ -386,6 +385,7 @@ nav a:hover {
     align-items: center;
     gap: 40px;
     max-width: 900px;
+    margin-top: 30px;
 }
 
 .client-avatar {
@@ -456,7 +456,7 @@ nav a:hover {
     flex-direction: column;
     gap: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
 }
 
 .contact-card-item {
@@ -634,6 +634,6 @@ footer {
     }
     
     nav {
-        display: none; /* Można rozwinąć w menu mobilne w przyszłości */
+        display: none;
     }
 }
