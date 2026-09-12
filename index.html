@@ -43,7 +43,7 @@
     <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
         <h2>Wybrane <span class="gradient-text">Realizacje</span></h2>
-        <p class="subtitle">Kliknij w projekt, aby zobaczyć grafikę w pełnej, ultra-wysokiej jakości.</p>
+        <p class="subtitle">Przeciągnij suwak na miniaturkach Przed/Po lub kliknij w projekt, aby zobaczyć grafikę w pełnej jakości.</p>
         
         <div class="portfolio-grid">
             <!-- PROJEKT 1: CS2 -->
@@ -70,6 +70,46 @@
                 <div class="overlay">
                     <h3>Baner / Oprawa</h3>
                     <p>Kliknij po podgląd HD</p>
+                </div>
+            </div>
+
+            <!-- PROJEKT PRZED / PO 1: FIRST DAY -->
+            <div class="portfolio-item-ba">
+                <div class="ba-container" onmousemove="moveSlider(event, this)" ontouchmove="moveSliderTouch(event, this)" onclick="event.stopPropagation()">
+                    <img src="pierwszydzień-po.png" alt="Miniaturka Po" class="ba-img-after">
+                    <div class="ba-before-wrapper">
+                        <img src="firstday-przed.png" alt="Miniaturka Przed" class="ba-img-before">
+                    </div>
+                    <div class="ba-slider-handle" onmousedown="startDrag(event, this)" ontouchstart="startDragTouch(event, this)">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+                <div class="ba-info" onclick="openModal('pierwszydzień-po.png', 'Metamorfoza: First Day', 'Porównanie surowego kadr / wstępnego projektu z ostateczną, dopracowaną miniaturką YouTube przygotowaną pod wysoki CTR.')">
+                    <div class="ba-text-content">
+                        <h3>First Day (Metamorfoza)</h3>
+                        <p>Przed / Po • Kliknij po podgląd HD</p>
+                    </div>
+                    <span class="ba-badge">B/A</span>
+                </div>
+            </div>
+
+            <!-- PROJEKT PRZED / PO 2: STRAGAN -->
+            <div class="portfolio-item-ba">
+                <div class="ba-container" onmousemove="moveSlider(event, this)" ontouchmove="moveSliderTouch(event, this)" onclick="event.stopPropagation()">
+                    <img src="stragan-po.png" alt="Miniaturka Po" class="ba-img-after">
+                    <div class="ba-before-wrapper">
+                        <img src="stragan-przed.png" alt="Miniaturka Przed" class="ba-img-before">
+                    </div>
+                    <div class="ba-slider-handle" onmousedown="startDrag(event, this)" ontouchstart="startDragTouch(event, this)">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+                <div class="ba-info" onclick="openModal('stragan-po.png', 'Metamorfoza: Stragan', 'Efektowna przemiana miniaturki ze straganem. Profesjonalna korekcja barwna, dodanie emocji i głębi.')">
+                    <div class="ba-text-content">
+                        <h3>Stragan (Metamorfoza)</h3>
+                        <p>Przed / Po • Kliknij po podgląd HD</p>
+                    </div>
+                    <span class="ba-badge">B/A</span>
                 </div>
             </div>
         </div>
