@@ -22,3 +22,63 @@ window.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+
+// --- OBSŁUGA INTERAKTYWNEGO SUWAKA PRZED / PO ---
+let activeContainer = null;
+
+function startDrag(e, element) {
+    activeContainer = element.parentElement;
+    e.preventDefault();
+}
+
+function startDragTouch(e, element) {
+    activeContainer = element.parentElement;
+}
+
+window.addEventListener('mouseup', () => {
+    activeContainer = null;
+});
+
+window.addEventListener('touchend', () => {
+    activeContainer = null;
+});
+
+window.addEventListener('mousemove', (e) => {
+    if (!activeContainer) return;
+    updateSliderPosition(e.clientX, activeContainer);
+});
+
+window.addEventListener('touchmove', (e) => {
+    if (!activeContainer) return;
+    if (e.touches && e.touches[0]) {
+        updateSliderPosition(e.touches[0].clientX, activeContainer);
+    }
+});
+
+function moveSlider(e, container) {
+    updateSliderPosition(e.clientX, container);
+}
+
+function moveSliderTouch(e, container) {
+    if (e.touches && e.touches[0]) {
+        updateSliderPosition(e.touches[0].clientX, container);
+    }
+}
+
+function updateSliderPosition(clientX, container) {
+    const rect = container.getBoundingClientRect();
+    let x = clientX - rect.left;
+    
+    if (x < 0) x = 0;
+    if (x > rect.width) x = rect.width;
+    
+    let percent = (x / rect.width) * 100;
+    
+    const beforeWrapper = container.querySelector('.ba-before-wrapper');
+    const handle = container.querySelector('.ba-slider-handle');
+    
+    if (beforeWrapper && handle) {
+        beforeWrapper.style.width = percent + '%';
+        handle.style.left = percent + '%';
+    }
+}
