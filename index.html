@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuniorStudio | Profesjonalna Grafika & Miniaturki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAGŁÓWEK / MENU -->
+    <header>
+        <div class="logo">Junior<span>Studio</span></div>
+        <nav>
+            <a href="#home">Start</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">O mnie</a>
+            <a href="#clients">Współpraca</a>
+        </nav>
+        <a href="https://www.behance.net/juniorstudio_pl" target="_blank" class="cta-btn-nav"><i class="fa-brands fa-behance"></i> Behance</a>
+    </header>
+
+    <!-- SEKCJA HERO (START) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tworzę grafikę, która <span class="gradient-text">przyciąga widzów</span></h1>
+            <p>Profesjonalne miniaturki YouTube, banery i oprawy graficzne dla twórców contentu. Wyróżnij swój kanał w tłumie.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn primary">Zobacz Portfolio</a>
+                <a href="https://www.behance.net/juniorstudio_pl" target="_blank" class="btn secondary"><i class="fa-brands fa-behance"></i> Profil Behance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <h2>Wybrane <span class="gradient-text">Realizacje</span></h2>
+        <p class="subtitle">Kliknij w projekt, aby zobaczyć grafikę w pełnej, ultra-wysokiej jakości.</p>
+        
+        <div class="portfolio-grid">
+            <!-- Projekt 1 -->
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop', 'Miniaturka YouTube - Gaming Pro', 'Projekt wykonany dla kanału gamingowego. Pełna dbałość o detale i kontrast.')">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" alt="Projekt 1">
+                <div class="overlay">
+                    <h3>Miniaturka YouTube</h3>
+                    <p>Kliknij po podgląd HD</p>
+                </div>
+            </div>
+            <!-- Projekt 2 -->
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1920&auto=format&fit=crop', 'Oprawa Manhunt / Minecraft', 'Dynamiczna grafika w klimacie Minecraft Manhunt.')">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop" alt="Projekt 2">
+                <div class="overlay">
+                    <h3>Grafika Manhunt</h3>
+                    <p>Kliknij po podgląd HD</p>
+                </div>
+            </div>
+            <!-- Projekt 3 -->
+            <div class="portfolio-item" onclick="openModal('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1920&auto=format&fit=crop', 'Baner na Kanał YT', 'Nowoczesny i czysty baner dopasowany pod branding klienta.')">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" alt="Projekt 3">
+                <div class="overlay">
+                    <h3>Baner YouTube</h3>
+                    <p>Kliknij po podgląd HD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA KLIENT / ARAB_MC -->
+    <section id="clients" class="clients-section">
+        <h2>Wybrana <span class="gradient-text">Współpraca</span></h2>
+        <div class="client-card">
+            <div class="client-avatar" onclick="window.open('https://www.youtube.com/@ArabbbYT', '_blank')" title="Kliknij, aby przejść do kanału YouTube!">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="client-info">
+                <h3>Arab_mc</h3>
+                <p class="client-stats"><span>~3,74 tys. subskrybentów</span> • <span>87,3 tys.+ wyświetleń</span></p>
+                <p>Twórca contentu gamingowego, dla którego realizowałem projekty graficzne. Kliknij w awatar lub przycisk poniżej, aby odwiedzić jego kanał na YouTube!</p>
+                <a href="https://www.youtube.com/@ArabbbYT" target="_blank" class="btn secondary yt-btn"><i class="fa-brands fa-youtube"></i> Odwiedź kanał Arab_mc</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DO PODGLĄDU GRAFIKI W ULTRA JAKOŚCI -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <div class="modal-content-container" onclick="event.stopPropagation()">
+            <img id="modalImg" src="" alt="Podgląd HD">
+            <div class="modal-text">
+                <h3 id="modalTitle">Tytuł projektu</h3>
+                <p id="modalDesc">Opis projektu...</p>
+                <span class="badge-hd"><i class="fa-solid fa-gem"></i> Tryb Ultra HD (Piksel-perfect)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- STOPKA -->
+    <footer>
+        <p>&copy; 2026 JuniorStudio. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-socials">
+            <a href="https://www.behance.net/juniorstudio_pl" target="_blank"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://www.youtube.com/@ArabbbYT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
