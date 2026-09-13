@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuniorStudio | Profesjonalna Grafika & Miniaturki</title>
-    <!-- WŁASNA IKONA (FAVICON) -->
     <link rel="icon" type="image/png" href="icon.png">
     
     <link rel="stylesheet" href="style.css">
@@ -13,7 +12,6 @@
 </head>
 <body>
 
-    <!-- NAGŁÓWEK / MENU -->
     <header>
         <div class="logo">Junior<span>Studio</span></div>
         <nav>
@@ -28,7 +26,6 @@
         <a href="https://www.behance.net/juniorstudio_pl" target="_blank" class="cta-btn-nav"><i class="fa-brands fa-behance"></i> Behance</a>
     </header>
 
-    <!-- SEKCJA HERO (START) -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Tworzę grafikę, która <span class="gradient-text">przyciąga widzów</span></h1>
@@ -40,13 +37,11 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
         <h2>Wybrane <span class="gradient-text">Realizacje</span></h2>
         <p class="subtitle">Kliknij w projekt, aby zobaczyć grafikę w pełnej jakości.</p>
         
         <div class="portfolio-grid">
-            <!-- PROJEKT 1: CS2 -->
             <div class="portfolio-item" onclick="openModal('cs2.png', 'Miniaturka CS2 - 500zł na skiny', 'Przyciągająca wzrok miniaturka do materiału z Counter-Strike 2. Zaprojektowana tak, aby maksymalnie podnieść klikalność (CTR) przy filmach z otwierania skrzynek i wygrywania nagród.')">
                 <img src="cs2.png" alt="Miniaturka CS2">
                 <div class="overlay">
@@ -55,7 +50,6 @@
                 </div>
             </div>
 
-            <!-- PROJEKT 2: MANHUNT --> 
             <div class="portfolio-item" onclick="openModal('manhunt.png', 'Arab Manhunt 1vs4', 'Dynamiczna miniaturka do filmu Minecraft Manhunt 1vs4 stworzona dla twórcy Arab. Przedstawia ucieczkę pod ziemią i skoordynowany pościg łowców na powierzchni.')">
                 <img src="manhunt.png" alt="Arab Manhunt 1vs4">
                 <div class="overlay">
@@ -64,7 +58,6 @@
                 </div>
             </div>
 
-            <!-- PROJEKT 3: BANER -->
             <div class="portfolio-item" onclick="openModal('banner.png', 'Baner JuniorStudio', 'Nowoczesny i elegancki baner reklamowy JuniorStudio budujący profesjonalny wizerunek marki.')">
                 <img src="banner.png" alt="Baner JuniorStudio">
                 <div class="overlay">
@@ -72,10 +65,17 @@
                     <p>Kliknij po podgląd HD</p>
                 </div>
             </div>
+
+            <div class="portfolio-item video-portfolio-item">
+                <video src="animacja1.mp4" autoplay muted loop playsinline controls></video>
+                <div class="overlay">
+                    <h3>Sceny / Animacje 3D</h3>
+                    <p>Prezentacja wideo w portfolio</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SEKCJA CENNIK -->
     <section id="cennik" class="pricing-section">
         <div class="section-title">
             <h2>Cennik <span class="gradient-text">Usług</span></h2>
@@ -129,7 +129,6 @@
                 </div>
             </div>
             
-            <!-- PRAWY PANEL -->
             <div class="pricing-card-side">
                 <h3>Dlaczego my?</h3>
                 <ul class="why-us-list">
@@ -152,7 +151,6 @@
         </div>
     </section>
 
-    <!-- SEKCJA O MNIE -->
     <section id="about" class="about-section">
         <h2>O <span class="gradient-text">Mnie</span></h2>
         <p class="about-desc">
@@ -160,7 +158,6 @@
         </p>
     </section>
 
-    <!-- SEKCJA WSPÓŁPRACA -->
     <section id="wspolpraca" class="clients-section">
         <h2>Wybrana <span class="gradient-text">Współpraca</span></h2>
         <div class="client-card">
@@ -176,7 +173,6 @@
         </div>
     </section>
 
-    <!-- SEKCJA FAQ -->
     <section id="faq" class="faq-section" style="padding: 80px 20px; max-width: 900px; margin: 0 auto;">
         <div class="section-title" style="text-align: center; margin-bottom: 40px;">
             <h2>Często Zadawane <span class="gradient-text">Pytania</span></h2>
@@ -216,7 +212,6 @@
         </div>
     </section>
 
-    <!-- SEKCJA KONTAKT -->
     <section id="kontakt" class="contact-section">
         <h2>Szukasz Grafika? <span class="gradient-text">Napisz do mnie!</span></h2>
         <p class="subtitle">Skontaktuj się z JuniorStudio przez wybrane kanały</p>
@@ -247,7 +242,6 @@
         <p class="contact-footer-note">Dziękuję za uwagę — do zobaczenia na Discordzie!</p>
     </section>
 
-    <!-- MODAL DO PODGLĄDU GRAFIKI -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <div class="modal-content-container" onclick="event.stopPropagation()">
@@ -260,7 +254,6 @@
         </div>
     </div>
 
-    <!-- STOPKA -->
     <footer>
         <p>&copy; 2026 JuniorStudio. Wszelkie prawa zastrzeżone.</p>
         <div class="footer-socials">
